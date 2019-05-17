@@ -1,8 +1,8 @@
 #!/bin/bash
 
-rpis=(rpi01 rpi02 rpi03 rpi04 rpi05 rpi06 rpi06 rpi07 rpi08 rpi09 rpi10 rpi11 rpi12 rpi13 rpi14 rpi15 rpi16 rpi17 rpi18 rpi19 rpi20)
+rpis="rpitest rpi01 rpi02 rpi03 rpi04 rpi05 rpi06 rpi06 rpi07 rpi08 rpi09 rpi10 rpi11 rpi12 rpi13 rpi14 rpi15 rpi16 rpi17 rpi18 rpi19 rpi20"
 echo 
-for i in "rpi01" "rpi02" "rpi03" "rpi04" "rpi05" "rpi06" "rpi06" "rpi07" "rpi08" "rpi09" "rpi10" "rpi11" "rpi12" "rpi13" "rpi14" "rpi15" "rpi16" "rpi17" "rpi18" "rpi19" "rpi20";
+for i in $rpis;
 do
 	ping -c 1 $i > /dev/null 2>&1
 	if [ $? -eq 0 ]; then
